@@ -27,11 +27,13 @@
     <ul class='mt-7 font-light'>
       {#if type === 'Projects'}
         {#each list as item}
+        {@const isActive = item.id === activeTab}
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:'
-            class:text-brown={item.id === activeTab}
+            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class:text-brown-500={isActive}
+            class:border-b-brown-100={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.name}
@@ -45,11 +47,13 @@
 
       {#if type === 'Employment'}
         {#each list as item}
+          {@const isActive = item.id === activeTab}
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2'
-            class:text-brown={item.id === activeTab}
+            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class:text-brown-500={isActive}
+            class:border-b-brown-100={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.name}
@@ -61,11 +65,13 @@
 
       {#if type === 'Blog'}
         {#each list as item}
+        {@const isActive = item.id === activeTab}
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2'
-            class:text-brown={item.id === activeTab}
+            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class:text-brown-500={isActive}
+            class:border-b-brown-100={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.title}
@@ -91,7 +97,7 @@
         {content?.description}
       </p>
 
-      <a href='{content?.repo}' class='text-brown text-sm'>
+      <a href='{content?.repo}' class='text-brown-500 text-sm'>
         View code
       </a>
     {/if}
@@ -107,7 +113,7 @@
         {content?.description}
       </p>
 
-      <small class='text-brown'>
+      <small class='text-brown-500'>
         {content?.duration}
       </small>
     {/if}
@@ -124,7 +130,7 @@
         {content?.description}
       </p>
 
-      <a href={url} class='text-brown text-sm'>Read it</a>
+      <a href={url} class='text-brown-500 text-sm'>Read it</a>
     {/if}
   </div>
 </section>
