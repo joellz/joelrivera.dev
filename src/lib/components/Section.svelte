@@ -31,9 +31,10 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
+            class:before:bg-brown-500={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.name}
@@ -51,9 +52,10 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
+            class:before:bg-brown-500={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.name}
@@ -69,9 +71,10 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
+            class:before:bg-brown-500={isActive}
             on:click={() => handleTabSelect(item.id)}>
 
             {item.title}
