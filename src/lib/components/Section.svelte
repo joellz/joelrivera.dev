@@ -15,7 +15,7 @@
   }
 </script>
 
-<section class='flex flex-col lg:flex-row lg:items-center lg:justify-between p-7 md:py-28 lg:py-40 md:px-28 lg:px-40 border-b-[#E9E9E9] border-b-2 border-dotted'>
+<section class='flex flex-col lg:flex-row lg:items-center lg:justify-between p-7 md:py-28 lg:py-40 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted'>
   <!--Tabs-->
   <div class='w-full lg:w-1/3 xl:w-1/2 flex flex-col lg:mr-16'>
     <div class='flex items-center justify-between'>
@@ -31,7 +31,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
             class:before:bg-brown-500={isActive}
@@ -52,7 +52,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
             class:before:bg-brown-500={isActive}
@@ -71,7 +71,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
           <li
-            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
+            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-brown-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
             class:text-brown-500={isActive}
             class:border-b-brown-100={isActive}
             class:before:bg-brown-500={isActive}
