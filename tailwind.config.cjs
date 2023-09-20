@@ -8,7 +8,11 @@ const config = {
     },
     extend: {
       colors: {
-        brown: '#754E4E'
+        brown: {
+          50: 'rgba(117, 78, 78, 0.02)',
+          100: 'rgba(117, 78, 78, 0.25)',
+          500: 'rgb(117, 78, 78)'
+        }
       },
       container: {
         screens: {
