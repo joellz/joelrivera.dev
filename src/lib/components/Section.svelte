@@ -1,6 +1,6 @@
 <script lang='ts'>
   import type { Project, Employer, Post } from '../../types/generated/graphql'
-  import LinkIcon from '../components/LinkIcon.svelte'
+  import LinkIcon from './icons/LinkIcon.svelte'
 
   export let data:
     | { type: 'Projects', list: Array<Project> }

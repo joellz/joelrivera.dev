@@ -3,8 +3,8 @@
   import { applyTheme } from '$lib/theme/apply'
   import { theme } from '$lib/theme/state'
 
-  import MoonIcon from './MoonIcon.svelte'
-  import SunIcon from './SunIcon.svelte'
+  import MoonIcon from './icons/MoonIcon.svelte'
+  import SunIcon from './icons/SunIcon.svelte'
 
   applyTheme()
 </script>
