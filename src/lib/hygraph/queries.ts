@@ -15,6 +15,7 @@ export const GET_ALL_DATA = gql`
       name
       description
       duration
+      link
     }
 
     posts {
