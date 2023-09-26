@@ -1,25 +1,18 @@
 <script lang='ts'>
-  import { setTheme } from "$lib/theme/set";
-  import { applyTheme } from "$lib/theme/apply";
-  import { theme } from "$lib/theme/state";
+  import { setTheme } from '$lib/theme/set'
+  import { applyTheme } from '$lib/theme/apply'
+  import { theme } from '$lib/theme/state'
+
+  import MoonIcon from './MoonIcon.svelte'
+  import SunIcon from './SunIcon.svelte'
 
   applyTheme()
 </script>
 
-<button class='rounded-full w-5' on:click={setTheme}>
+<button class='w-5 h-5 rounded-full flex items-center justify-center cursor-pointer focus:outline-dotted dark:focus:outline-white/50 focus:outline-black p-5' on:click={setTheme}>
   {#if $theme === 'dark'}
-    <img
-      width='27'
-      height='27'
-      src='/light.svg'
-      alt='A white icon of a sun.'
-    />
+    <SunIcon />
     {:else}
-    <img
-      width='27'
-      height='27'
-      src='/dark.svg'
-      alt='A black icon of a crecent moon.'
-    />
+    <MoonIcon />
   {/if}
 </button>
