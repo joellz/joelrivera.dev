@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config}*/
 const config = {
+  darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
@@ -8,10 +9,10 @@ const config = {
     },
     extend: {
       colors: {
-        brown: {
-          50: 'rgba(117, 78, 78, 0.02)',
-          100: 'rgba(117, 78, 78, 0.25)',
-          500: 'rgb(117, 78, 78)'
+        olive: {
+          50: 'rgba(110, 126, 110, 0.02)',
+          100: 'rgba(110, 126, 110, 0.25)',
+          500: 'rgb(110, 126, 110)'
         }
       },
       container: {

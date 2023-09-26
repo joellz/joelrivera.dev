@@ -10,21 +10,21 @@
 
 <main>
   <!--Hero Section-->
-  <section class='md:h-96 xl:h-[500px] p-7 md:px-28 lg:px-40 md:flex md:items-center md:flex-row md:justify-between border-b-[#E9E9E9] border-b-2 border-dotted'>
+  <section class='md:h-96 xl:h-[500px] p-7 md:px-28 lg:px-40 md:flex md:items-center md:flex-row md:justify-between border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5'>
     <div>
-      <h1 class='text-brown-500 font-medium text-2xl md:text-4xl lg:text-5xl max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px]'>
+      <h1 class='text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
         I love to design and build stuff for the web.
       </h1>
 
       <div>
-        <p class='font-light pt-5 lg:max-w-lg'>
+        <p class='font-light pt-5 lg:max-w-lg antialiased'>
           Hey! I'm Joel, a senior front-end software engineer specializing
           in modern web applications. I love to play around with
           cutting-edge tech like SvelteKit, Remix, Qwik, Tailwind, and GraphQL
           among other things.
         </p>
 
-        <button class='text-brown-500 mt-5 font-medium text-xs'>
+        <button class='text-olive-500 mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
           Read more
         </button>
       </div>
@@ -39,16 +39,16 @@
     />
   </section>
 
-  <div class='w-full bg-brown-50'>
+  <div class='w-full bg-olive-50 dark:bg-white/5'>
     <Section data={{ type: 'Projects', list: projects }} />
     <Section data={{ type: 'Employment', list: employers }} />
     <Section data={{ type: 'Blog', list: posts }} />
   </div>
 
-  <footer class='w-full bg-brown-500 xl:h-[500px] p-7 pb-10 md:pb-32 md:pt-28 lg:py-40 md:px-28 lg:px-40 flex flex-col md:items-start md:flex-row md:justify-between mt-1'>
+  <footer class='w-full bg-gradient-to-r from-white from-7% to-olive-500/20 dark:from-black dark:to-olive-100 xl:h-[500px] p-7 pb-10 md:pb-32 md:pt-28 lg:py-40 md:px-28 lg:px-40 flex flex-col md:items-start md:flex-row md:justify-between mt-1'>
     <div>
       <div class='w-full flex items-center justify-between'>
-        <h1 class='font-extrabold text-white font-mono'>
+        <h1 class='font-extrabold text-black dark:text-white font-mono'>
           Contact
         </h1>
 
@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <p class='text-white font-extralight md:max-w-[300px] lg:max-w-lg mt-10'>
+      <p class='text-black dark:text-white font-light md:max-w-[300px] lg:max-w-lg mt-10'>
         Although I'm not currently looking for any new
         employment opportunities, my inbox is always open.
       </p>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <button class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] max-w-xs pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10'>
+    <button class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] max-w-xs pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
       Say Hello! <img src='/right-arrow-xs-light.svg' alt='' />
     </button>
   </footer>
