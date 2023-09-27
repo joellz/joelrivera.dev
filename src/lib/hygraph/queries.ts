@@ -29,3 +29,26 @@ export const GET_ALL_DATA = gql`
     }
   }
 `
+
+export const GET_POSTS = gql`
+  query Posts {
+    posts {
+      id
+      slug
+      title
+      updatedAt
+    }
+  }
+`
+
+export const GET_POST = gql`
+  query Post($slug: String!) {
+    post(where: { slug: $slug }) {
+      title
+      description
+      body
+      publishedAt
+      updatedAt
+    }
+  }
+`
