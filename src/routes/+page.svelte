@@ -4,51 +4,49 @@
   import { fade } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing'
 
-  import Section from '$lib/components/Section.svelte'
-  import SocialButtons from '$lib/components/SocialButtons.svelte'
+  import BlogSection from '$lib/components/BlogSection.svelte'
+  import ProjectSection from '$lib/components/ProjectSection.svelte'
+  import EmploymentSection from '$lib/components/EmploymentSection.svelte'
+  import SocialButtons from '$lib/components/icons/SocialButtons.svelte'
+
+  import { applyTheme } from '$lib/theme/apply'
+  import { beforeUpdate } from 'svelte'
 
   export let data: PageData
   const { projects, employers, posts } = data
 
   let heroExpanded = false
+  beforeUpdate(() => applyTheme())
 </script>
 
 <main>
   <!--Hero Section-->
-  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5'>
-    <div class='md:flex md:items-center md:flex-row md:justify-between xl:mt-20'>
-      <div>
-        <h1 class='text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
-          I love to design and build stuff for the web.
-        </h1>
+  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 xl:pt-28 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start'>
+    <h1 class='title text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
+      I love to design and build experiences for the web.
+    </h1>
 
-        <div>
-          <p class='font-light pt-5 lg:max-w-lg'>
-            Hey! I'm Joel, a senior front-end software engineer specializing
-            in modern web applications. I love to play around with
-            cutting-edge tech like React, Remix, SvelteKit, Tailwind, and GraphQL
-            among other things.
-          </p>
+    <p class='font-light pt-5 lg:max-w-lg dark:antialiased'>
+      Hey! I'm Joel, a senior front-end software engineer specializing
+      in modern web applications. I love to play around with
+      cutting-edge tech like Remix, SvelteKit, Tailwind, and GraphQL
+      among other things.
+    </p>
 
-          <button
-            class='text-olive-500 mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
-            on:click={() => heroExpanded = !heroExpanded}>
-            { heroExpanded ? 'Read less' : 'Read more' }
-          </button>
-        </div>
-      </div>
-
-      <img
-        class='hidden xl:flex mt-7 md:m-0'
-        width='448'
-        height='auto'
-        src='/hero.png'
-        alt='A hero section portrait of Joel Rivera looking off into the distance.'
-      />
-    </div>
+    <button
+      class='text-olive-500 mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
+      on:click={() => heroExpanded = !heroExpanded}>
+      { heroExpanded ? 'Read less' : 'Read more' }
+    </button>
 
     {#if heroExpanded}
-      <div transition:fade={{ easing: quintInOut, duration: 200 }} class='font-light lg:max-w-lg'>
+      <div
+        transition:fade={{
+          easing: quintInOut,
+          duration: 200
+        }}
+        class='font-light lg:max-w-lg text-gray-600 dark:text-gray-400 dark:antialiased'>
+
         <p class='pt-5'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu quam quis nisi
           mattis dapibus at quis libero. Aenean ornare diam ut orci iaculis, id finibus sapien
@@ -83,9 +81,9 @@
   </section>
 
   <div class='w-full bg-olive-50 dark:bg-white/5'>
-    <Section data={{ type: 'Projects', list: projects }} />
-    <Section data={{ type: 'Employment', list: employers }} />
-    <Section data={{ type: 'Blog', list: posts }} />
+    <ProjectSection {projects} />
+    <EmploymentSection {employers} />
+    <BlogSection {posts} />
   </div>
 
   <footer class='w-full bg-gradient-to-r from-white from-7% to-olive-500/20 dark:from-black dark:to-olive-100 xl:h-[500px] p-7 pb-10 md:pb-32 md:pt-28 lg:py-40 md:px-28 lg:px-40 flex flex-col md:items-start md:flex-row md:justify-between mt-1'>
@@ -110,8 +108,8 @@
       </div>
     </div>
 
-    <button class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] max-w-xs pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
+    <a href='mailto:joelrivera.me@gmail.com?subject=Hello!' class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] max-w-xs pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
       Say Hello! <img src='/right-arrow-xs-light.svg' alt='' />
-    </button>
+    </a>
   </footer>
 </main>
