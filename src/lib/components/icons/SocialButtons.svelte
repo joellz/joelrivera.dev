@@ -2,7 +2,7 @@
 <div class='flex items-center'>
   <a
     class='mr-5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
-    href='https://github.com/joellz'
+    href='https://github.com/joelriveradev/'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Click to visit my Github profile.'>
