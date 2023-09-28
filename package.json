@@ -39,9 +39,12 @@
     "@graphql-codegen/introspection": "^4.0.0",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@sveltejs/adapter-vercel": "^3.0.3",
+    "@tailwindcss/typography": "^0.5.10",
     "dotenv": "^16.3.1",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
+    "marked": "^9.0.3",
     "mdsvex": "^0.11.0"
   }
 }
