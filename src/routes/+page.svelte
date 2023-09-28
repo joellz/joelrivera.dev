@@ -38,7 +38,7 @@
     </p>
 
     <button
-      class='text-black mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
+      class='text-black dark:text-white mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
       on:click={() => heroExpanded = !heroExpanded}>
       { heroExpanded ? 'Read less' : 'Read more' }
     </button>
