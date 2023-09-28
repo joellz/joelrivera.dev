@@ -7,9 +7,9 @@
   let activeProject = projects[0]
 </script>
 
-<section class='flex flex-col lg:flex-row lg:items-center lg:justify-between p-7 md:py-28 lg:py-40 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted'>
+<section class='flex flex-col xl:flex-row xl:items-center xl:justify-between p-7 md:py-28 lg:py-40 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted'>
   <!--Tabs-->
-  <div class='w-full lg:w-1/3 xl:w-1/2 flex flex-col lg:mr-16'>
+  <div class='w-full  xl:w-1/2 flex flex-col lg:mr-16'>
     <div>
       <header class='w-full flex items-center justify-between'>
         <h1 class='font-extrabold font-mono antialiased'>Projects</h1>
@@ -46,7 +46,7 @@
 
   <!--Active Project Data-->
 
-  <div class='w-full lg:w-2/3 xl:w-1/2 xl:ml-10 mt-7'>
+  <div class='w-full xl:w-1/2 xl:ml-10 mt-7'>
       <span class='font-bold font-mono text-sm tracking-tight antialiased'>
         {activeProject.name}
       </span>

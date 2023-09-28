@@ -16,31 +16,36 @@
   const { projects, employers, posts } = data
 
   let heroExpanded = false
+
   beforeUpdate(() => applyTheme())
 </script>
 
 <svelte:head>
   <title>Joel Rivera</title>
+
+  <meta
+    name='description'
+    content='Learn more about who I am as a creative software engineer.'
+  />
 </svelte:head>
 
 <main>
-  <!--Hero Section-->
-  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 xl:pt-28 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start'>
-    <h1 class='title text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
+  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40  border-y-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start lg:items-center lg:justify-center bg-[radial-gradient(rgba(255,255,255,0.35),transparent_1px)] [background-size:36px_36px]'>
+    <h1 class='title text-olive-500 lg:text-center font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
       I love to design and build experiences for the web.
     </h1>
 
-    <p class='font-light pt-5 lg:max-w-lg dark:antialiased'>
+    <p class='font-light pt-5 lg:max-w-lg dark:antialiased lg:text-center'>
       Hey! I'm Joel, a senior front-end software engineer specializing
       in modern web applications. I love to play around with
-      cutting-edge tech like Remix, SvelteKit, Tailwind, and GraphQL
+      cutting-edge tech SvelteKit, Qwik, and GraphQL
       among other things.
     </p>
 
     <button
       class='text-black dark:text-white mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
       on:click={() => heroExpanded = !heroExpanded}>
-      { heroExpanded ? 'Read less' : 'Read more' }
+      { heroExpanded ? 'Collapse' : 'Read more' }
     </button>
 
     {#if heroExpanded}
@@ -49,36 +54,37 @@
           easing: quintInOut,
           duration: 200
         }}
-        class='font-light lg:max-w-lg text-gray-600 dark:text-gray-400 dark:antialiased'>
+        class='font-light lg:max-w-lg text-gray-600 dark:text-gray-400 dark:antialiased lg:text-center'>
 
         <p class='pt-5'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu quam quis nisi
-          mattis dapibus at quis libero. Aenean ornare diam ut orci iaculis, id finibus sapien
-          viverra. Aliquam quis fermentum diam. In et ipsum vestibulum libero sollicitudin volutpat.
-          Nam eu diam ligula. Vestibulum at urna nulla. Maecenas sed felis pretium, ultricies sapien
-          sed, efficitur ipsum. Phasellus felis velit, ullamcorper non ultricies vitae, accumsan
-          ac nunc. Nam eleifend tortor elit. Phasellus nec risus sollicitudin, sodales sapien
-          ac, dictum leo.
+          My tech stack is React, TypeScript, TailwindCSS, Next.js and Remix.
+          I am really interested and passionate about building products and
+          user experiences on the web. I've been doing it for (almost) 10 years.
         </p>
 
         <p class='pt-5'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu quam quis nisi
-          mattis dapibus at quis libero. Aenean ornare diam ut orci iaculis, id finibus sapien
-          viverra. Aliquam quis fermentum diam. In et ipsum vestibulum libero sollicitudin volutpat.
-          Nam eu diam ligula. Vestibulum at urna nulla. Maecenas sed felis pretium, ultricies sapien
-          sed, efficitur ipsum. Phasellus felis velit, ullamcorper non ultricies vitae, accumsan
-          ac nunc. Nam eleifend tortor elit. Phasellus nec risus sollicitudin, sodales sapien
-          ac, dictum leo.
+          Because of my background in graphic design, I am a perfectionist, and
+          I have a keen eye for design and detail. I care about the details that
+          people generally <em>don't notice</em> and <em>don't care</em> to know about.
         </p>
 
         <p class='pt-5'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu quam quis nisi
-          mattis dapibus at quis libero. Aenean ornare diam ut orci iaculis, id finibus sapien
-          viverra. Aliquam quis fermentum diam. In et ipsum vestibulum libero sollicitudin volutpat.
-          Nam eu diam ligula. Vestibulum at urna nulla. Maecenas sed felis pretium, ultricies sapien
-          sed, efficitur ipsum. Phasellus felis velit, ullamcorper non ultricies vitae, accumsan
-          ac nunc. Nam eleifend tortor elit. Phasellus nec risus sollicitudin, sodales sapien
-          ac, dictum leo.
+          I touch everything that goes into building a complete product—UI/UX design,
+          front-end design, architecture, implementation and testing, back-end
+          api's, databases, and multi-stage CI/CD deployments.
+        </p>
+
+        <p class='pt-5'>
+          Most importantly though, and above everything else, I am consecrated
+          Seventh-day Adventist christian. I love Jesus Christ so much, I am
+          surrendered to him, and my entire life is centered around glorifying him.
+        </p>
+
+        <p class='pt-5'>
+          I'm married to a beautiful wife, and we're actively engaged in
+          ministry to finish God's work. We're preparing to meet Christ on
+          that glorious and blessed morning when he shall come to gather
+          us as his elect.
         </p>
       </div>
     {/if}
@@ -112,8 +118,8 @@
       </div>
     </div>
 
-    <a href='mailto:joelrivera.me@gmail.com?subject=Hello!' class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] max-w-xs pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
-      Say Hello! <img src='/right-arrow-xs-light.svg' alt='' />
+    <a href='mailto:joelrivera.me@gmail.com?subject=Hello!' class='flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'>
+      Say Hello! <img src='/right-arrow-xs-light.svg' alt='' width='18' height='18' aria-hidden={true} />
     </a>
   </footer>
 </main>
