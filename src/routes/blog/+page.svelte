@@ -3,6 +3,10 @@
   export let data
 </script>
 
+<svelte:head>
+  <title>Joel Rivera — Blog</title>
+</svelte:head>
+
 <div class='w-full p-7 min-h-screen md:py-28 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5'>
   <h1 class='text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased mb-10'>Blog</h1>
 

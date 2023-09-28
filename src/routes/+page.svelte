@@ -19,6 +19,10 @@
   beforeUpdate(() => applyTheme())
 </script>
 
+<svelte:head>
+  <title>Joel Rivera</title>
+</svelte:head>
+
 <main>
   <!--Hero Section-->
   <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 xl:pt-28 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start'>
