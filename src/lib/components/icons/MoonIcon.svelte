@@ -1,4 +1,4 @@
-<svg  width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg" role='img' aria-hidden={true}>
   <g clip-path="url(#clip0_366_500)">
     <path
       class='stroke-black'

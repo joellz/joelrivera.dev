@@ -32,7 +32,7 @@
 
           {title}
 
-          <a href='/blog/post/{slug}'>
+          <a href='/blog/post/{slug}' class='focus:outline-dotted dark:focus:outline-white/50 focus:outline-black' aria-label='Read this blog post.'>
             <LinkIcon />
           </a>
         </li>
@@ -40,7 +40,7 @@
 
       <li>
         <a
-          class='block text-xs mt-6 hover:opacity-50'
+          class='block text-xs mt-6 hover:opacity-50 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
           href='/blog'>
           View all
         </a>

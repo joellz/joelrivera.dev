@@ -18,24 +18,29 @@
 
     <ul class='mt-7 font-light'>
       {#each projects as project (project.id)}
-        {@const { id, name, url } = project }
-        {@const isActive = id === activeProject.id}
-          <!-- svelte-ignore a11y-click-events-have-key-events -->
-          <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-          <li
-            class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-olive-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
-            class:text-olive-500={isActive}
-            class:border-b-olive-100={isActive}
-            class:before:bg-olive-500={isActive}
-            on:click={() => activeProject = project}>
+        { @const { id, name, url } = project }
+        { @const isActive = id === activeProject.id }
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+        <li
+          class='flex relative items-center justify-between mb-3 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted pb-2 cursor-pointer hover:border-b-olive-100 transition-all before:absolute before:w-[2.5px] before:h-3 before:rounded-lg before:-left-2 md:before:-left-3'
+          class:text-olive-500={isActive}
+          class:border-b-olive-100={isActive}
+          class:before:bg-olive-500={isActive}
+          on:click={() => activeProject = project}>
 
-            {name}
+          {name}
 
-            <a href={url} class='text-sm focus:outline-dotted dark:focus:outline-white/50 focus:outline-black' target='_blank' rel='noopener noreferrer'>
-              <LinkIcon />
-            </a>
-          </li>
-        {/each}
+          <a
+            href={url}
+            class='text-sm focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Visit the {name} website.'>
+            <LinkIcon />
+          </a>
+        </li>
+      {/each}
     </ul>
   </div>
 
