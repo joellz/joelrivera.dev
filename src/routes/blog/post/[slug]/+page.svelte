@@ -4,7 +4,7 @@
 
   export let data
 
-  const { title, description, body, updatedAt, publishedAt } = data.post
+  const { title, description, body, publishedAt } = data.post
   const published = formatDate(new Date(publishedAt))
 </script>
 
@@ -23,7 +23,7 @@
   </h1>
 
   <small class='text-center block my-5 lg:my-8 antialiased text-gray-500'>
-    {published}
+    {published} { data?.views ? `— ${data.views} Views` : '' }
   </small>
 
   <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500'>

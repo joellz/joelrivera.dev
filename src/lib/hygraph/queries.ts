@@ -24,8 +24,6 @@ export const GET_ALL_DATA = gql`
       title
       description
       body
-      publishedAt
-      updatedAt
     }
   }
 `
@@ -36,7 +34,7 @@ export const GET_POSTS = gql`
       id
       slug
       title
-      updatedAt
+      publishedAt
     }
   }
 `
@@ -44,6 +42,7 @@ export const GET_POSTS = gql`
 export const GET_POST = gql`
   query Post($slug: String!) {
     post(where: { slug: $slug }) {
+      id
       title
       description
       body
