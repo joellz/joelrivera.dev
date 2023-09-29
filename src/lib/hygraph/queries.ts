@@ -2,7 +2,7 @@ import { gql } from 'graphql-request'
 
 export const GET_ALL_DATA = gql`
   query allData {
-    projects {
+    projects(first: 3) {
       id
       name
       description
@@ -10,7 +10,7 @@ export const GET_ALL_DATA = gql`
       url
     }
 
-    employers {
+    employers(first: 3) {
       id
       name
       description
@@ -18,7 +18,7 @@ export const GET_ALL_DATA = gql`
       link
     }
 
-    posts {
+    posts(first: 3, orderBy: publishedAt_DESC) {
       id
       slug
       title
@@ -32,7 +32,7 @@ export const GET_ALL_DATA = gql`
 
 export const GET_POSTS = gql`
   query Posts {
-    posts {
+    posts(orderBy: publishedAt_DESC) {
       id
       slug
       title
@@ -48,7 +48,6 @@ export const GET_POST = gql`
       description
       body
       publishedAt
-      updatedAt
     }
   }
 `
