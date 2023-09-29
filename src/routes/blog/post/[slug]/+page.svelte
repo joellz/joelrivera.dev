@@ -26,7 +26,7 @@
     {published}
   </small>
 
-  <main class='container mx-auto prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500'>
+  <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500'>
     {@html marked(body)}
   </main>
 </div>
