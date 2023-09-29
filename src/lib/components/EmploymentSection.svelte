@@ -17,7 +17,7 @@
 
     <ul class='mt-7 font-light'>
       {#each employers as employer (employer.id)}
-        {@const { id, name } = employer }
+        {@const { id, name, link } = employer }
         {@const isActive = id === activeEmployer.id}
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -30,7 +30,14 @@
 
             {name}
 
-            <LinkIcon />
+            <a
+              href={link}
+              class='text-sm focus:outline-dotted dark:focus:outline-white/50 focus:outline-black'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Visit the {name} website.'>
+              <LinkIcon />
+            </a>
           </li>
         {/each}
     </ul>

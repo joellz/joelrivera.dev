@@ -17,7 +17,7 @@
 
   {#if data.posts}
     {#each data.posts as post (post.id)}
-      {@const { title, updatedAt, slug } = post}
+      {@const { title, publishedAt, slug } = post}
 
       <a class='block mb-6' href='/blog/post/{slug}'>
         <span class='block antialiased font-semibold'>
@@ -25,7 +25,7 @@
         </span>
 
         <small class='antialiased text-gray-500'>
-          {formatDate(new Date(updatedAt))}
+          {formatDate(new Date(publishedAt))}
         </small>
       </a>
     {/each}
