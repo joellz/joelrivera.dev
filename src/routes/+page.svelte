@@ -75,8 +75,8 @@
         </p>
 
         <p class='pt-5'>
-          Most importantly though, and above everything else, I am consecrated
-          Seventh-day Adventist christian. I love Jesus Christ so much, I am
+          Most importantly though, and above everything else, I am a consecrated
+          Seventh-day Adventist christian. I love Jesus Christ, I am
           surrendered to him, and my entire life is centered around glorifying him.
         </p>
 
