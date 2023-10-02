@@ -54,7 +54,7 @@
       <div
         role='img'
         aria-hidden={true}
-        class='relative h-2 border-l border-l-white ml-3 mr-1 before:absolute before:w-1.5 before:h-1.5 before:border-b before:border-l before:rotate-[135deg] before:-left-[3.5px]'
+        class='relative h-2 border-l border-l-black dark:border-l-white ml-3 mr-1 before:absolute before:w-1.5 before:h-1.5 before:border-b before:border-b-black dark:before:border-b-white before:border-l before:border-l-black dark:before:border-l-white before:rotate-[135deg] before:-left-[3.5px]'
       />
     </button>
   </div>
