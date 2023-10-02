@@ -41,11 +41,11 @@
     </small>
   </div>
 
-  <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500 focus:outline-dotted dark:focus:outline-white/50 prose-a:focus:outline-dotted'>
+  <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500 focus:outline-dotted dark:focus:outline-white/50'>
     {@html marked(body)}
   </main>
 
-  <div class='max-w-xl mx-auto flex justify-center mt-16 border-t-2 border-t-black/25 dark:border-t-white/25 border-dotted pt-5 focus:prose-a:text-orange'>
+  <div class='max-w-xl mx-auto flex justify-center mt-16 border-t-2 border-t-black/25 dark:border-t-white/25 border-dotted pt-5'>
     <button
       class='flex items-center justify-center text-center mx-auto text-xs focus:outline-dotted dark:focus:outline-white/50 hover:opacity-30'
       on:click={scrollToTop}>
