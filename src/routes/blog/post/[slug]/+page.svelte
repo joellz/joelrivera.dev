@@ -6,6 +6,13 @@
 
   const { title, description, body, publishedAt } = data.post
   const published = formatDate(new Date(publishedAt))
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 </script>
 
 <svelte:head>
@@ -22,11 +29,33 @@
     {title}
   </h1>
 
-  <small class='text-center block my-5 lg:my-8 antialiased text-gray-500'>
-    {published} { data?.views ? `— ${data.views} Views` : '' }
-  </small>
+  <div class='w-full flex items-center justify-center mx-auto my-5 lg:my-8 antialiased text-gray-500'>
+    <small class='flex items-center'>
+      {published}
 
-  <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500'>
+      {#await data.streamed.views}
+        <span class='w-3 h-3 shrink-0 rounded-full ml-2 border-2 border-gray-500 border-dotted animate-spin' />
+        {:then views}
+          {#if views} — {views} Views {/if}
+      {/await}
+    </small>
+  </div>
+
+  <main class='container mx-auto max-w-xl prose prose-p:dark:text-white prose-p:text-sm lg:prose-p:text-lg prose-p:font-light prose-p:antialiased prose-p:text-black prose-a:text-olive-500 focus:outline-dotted dark:focus:outline-white/50 prose-a:focus:outline-dotted'>
     {@html marked(body)}
   </main>
+
+  <div class='max-w-xl mx-auto flex justify-center mt-16 border-t-2 border-t-black/25 dark:border-t-white/25 border-dotted pt-5 focus:prose-a:text-orange'>
+    <button
+      class='flex items-center justify-center text-center mx-auto text-xs focus:outline-dotted dark:focus:outline-white/50 hover:opacity-30'
+      on:click={scrollToTop}>
+      Back to top
+
+      <div
+        role='img'
+        aria-hidden={true}
+        class='relative h-2 border-l border-l-white ml-3 mr-1 before:absolute before:w-1.5 before:h-1.5 before:border-b before:border-l before:rotate-[135deg] before:-left-[3.5px]'
+      />
+    </button>
+  </div>
 </div>
