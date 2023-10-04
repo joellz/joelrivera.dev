@@ -5,7 +5,7 @@ const config = {
 
   theme: {
     fontFamily: {
-      mono: ['JetBrains Mono', 'monospace']
+      mono: ['Courier', 'monospace']
     },
     extend: {
       colors: {

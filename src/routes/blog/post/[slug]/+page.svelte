@@ -24,8 +24,8 @@
   />
 </svelte:head>
 
-<div class='w-full p-7 md:py-28 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5'>
-  <h1 class='text-center text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
+<div class='w-full p-7 md:py-28 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-center'>
+  <h1 class='text-center text-olive-500 font-medium text-3xl md:text-4xl lg:text-[40px] max-w-xl font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-15px] antialiased'>
     {title}
   </h1>
 
@@ -45,7 +45,7 @@
     {@html marked(body)}
   </main>
 
-  <div class='max-w-xl mx-auto flex justify-center mt-16 border-t-2 border-t-black/25 dark:border-t-white/25 border-dotted pt-5'>
+  <div class='w-full max-w-xl mt-16 border-t-2 border-t-black/25 dark:border-t-white/25 border-dotted pt-5'>
     <button
       class='flex items-center justify-center text-center mx-auto text-xs focus:outline-dotted dark:focus:outline-white/50 hover:opacity-30'
       on:click={scrollToTop}>
