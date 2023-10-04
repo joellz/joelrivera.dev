@@ -30,8 +30,8 @@
 </svelte:head>
 
 <main>
-  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40  border-y-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start lg:items-center lg:justify-center bg-[radial-gradient(rgba(255,255,255,0.35),transparent_1px)] [background-size:36px_36px]'>
-    <h1 class='title text-olive-500 lg:text-center font-medium text-2xl md:text-4xl lg:text-[40px] max-w-lg font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased'>
+  <section class='md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 border-y-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start lg:items-center lg:justify-center bg-[radial-gradient(rgba(255,255,255,0.35),transparent_1px)] [background-size:36px_36px]'>
+    <h1 class='title text-olive-500 lg:text-center font-medium text-2xl md:text-4xl lg:text-[40px] max-w-2xl font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-15px] antialiased'>
       I love to design and build experiences for the web.
     </h1>
 
