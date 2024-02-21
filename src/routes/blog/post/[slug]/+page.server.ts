@@ -5,6 +5,8 @@ import { pscale } from '$lib/pscale/index.js'
 import { hygraph } from '$lib/hygraph/index.js'
 import { GET_POST } from '$lib/hygraph/queries.js'
 
+export const prerender = true
+
 export const load = async ({ params: { slug } }) => {
   const { post } = await hygraph.request<{ post: Post }>(GET_POST, { slug })
 
