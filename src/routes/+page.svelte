@@ -58,7 +58,7 @@
         <p class="pt-5">
           My tech stack is React, TypeScript, TailwindCSS, Next.js and Remix. I am really interested
           and passionate about building products and user experiences on the web. I've been doing it
-          for (almost) 10 years.
+          for 10 years.
         </p>
 
         <p class="pt-5">
@@ -76,14 +76,7 @@
 
         <p class="pt-5">
           Most importantly though, and above everything else, I am a consecrated Seventh-day
-          Adventist christian. I love Jesus Christ, I am surrendered to him, and my entire life is
-          centered around glorifying him.
-        </p>
-
-        <p class="pt-5">
-          I'm married to a beautiful wife, and we're actively engaged in ministry to finish God's
-          work. We're preparing to meet Christ on that glorious and blessed morning when he shall
-          come to gather us as his elect.
+          Adventist christian. I love Jesus Christ, and my entire life is centered around him.
         </p>
       </div>
     {/if}
