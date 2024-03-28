@@ -1,126 +1,74 @@
 <script lang="ts">
-  import type { PageData } from './$types'
+  import ScrollTop from '$lib/components/scroll-top.svelte'
 
-  import { fade } from 'svelte/transition'
-  import { quintInOut } from 'svelte/easing'
-
-  import BlogSection from '$lib/components/BlogSection.svelte'
-  import ProjectSection from '$lib/components/ProjectSection.svelte'
-  import EmploymentSection from '$lib/components/EmploymentSection.svelte'
-  import SocialButtons from '$lib/components/icons/SocialButtons.svelte'
-
-  import { applyTheme } from '$lib/theme/apply'
-  import { beforeUpdate } from 'svelte'
-
-  export let data: PageData
+  export let data
   const { projects, employers, posts } = data
-
-  let heroExpanded = false
-
-  beforeUpdate(() => applyTheme())
 </script>
 
 <svelte:head>
   <title>Joel Rivera</title>
-  <meta name="description" content="Learn more about who I am as a creative software engineer." />
+  <meta name="description" content="Senior Front-End Engineer, AI" />
 </svelte:head>
 
-<main>
-  <section
-    class="md:min-h-96 xl:min-h-[500px] p-7 pb-16 md:px-28 lg:px-40 border-y-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5 flex flex-col items-start justify-start lg:items-center lg:justify-center bg-[radial-gradient(rgba(255,255,255,0.35),transparent_1px)] [background-size:36px_36px]"
-  >
-    <h1
-      class="title text-olive-500 lg:text-center font-medium text-2xl md:text-4xl lg:text-[40px] max-w-2xl font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-15px] antialiased"
-    >
-      I love to design and build experiences for the web.
-    </h1>
+<main class="p-10 lg:p-14 text-sm lg:text-base relative">
+  <header class="w-full">
+    <h1 class="antialiased">Joel Rivera</h1>
+    <p class="antialiased opacity-50">Senior Front-End Engineer, AI</p>
+  </header>
 
-    <p class="font-light pt-5 lg:max-w-lg dark:antialiased lg:text-center">
-      Hey! I'm Joel, a senior front-end engineer specializing in modern web applications. I love to
-      play around with cutting-edge tech like SvelteKit, Qwik, and GraphQL among other things.
-    </p>
+  <p class="w-full my-20 mt-[68px] antialiased max-w-md">
+    I love to build modern, AI-powered web applications, combining my engineering expertise with a
+    graphic designer's eye for design and detail. Open to new job opportunities, preferably within
+    AI.
+  </p>
 
-    <button
-      class="text-black dark:text-white mt-5 font-medium text-xs focus:outline-dotted dark:focus:outline-white/50 focus:outline-black"
-      on:click={() => (heroExpanded = !heroExpanded)}
-    >
-      {heroExpanded ? 'Collapse' : 'Read more'}
-    </button>
+  <!--Apps-->
+  <section>
+    <h2 class="font-bold mb-8">Apps</h2>
 
-    {#if heroExpanded}
-      <div
-        transition:fade={{
-          easing: quintInOut,
-          duration: 200
-        }}
-        class="font-light lg:max-w-lg text-gray-600 dark:text-gray-400 dark:antialiased lg:text-center"
+    {#each projects as project}
+      <a
+        class="block max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        href={project.url}
+        rel="noreferrer nofollow"
+        target="_blank"
       >
-        <p class="pt-5">
-          My tech stack is React, TypeScript, TailwindCSS, Next.js and Remix. I am really interested
-          and passionate about building products and user experiences on the web. I've been doing it
-          for 10 years.
-        </p>
-
-        <p class="pt-5">
-          Because of my background in graphic design, I am a perfectionist, and I have a keen eye
-          for design and detail. I care about the details that people generally <em>don't notice</em
-          >
-          and <em>don't care</em> to know about.
-        </p>
-
-        <p class="pt-5">
-          I touch everything that goes into building a complete product—UI/UX design, front-end
-          design, architecture, implementation and testing, back-end api's, databases, and
-          multi-stage CI/CD deployments.
-        </p>
-
-        <p class="pt-5">
-          Most importantly though, and above everything else, I am a consecrated Seventh-day
-          Adventist christian. I love Jesus Christ, and my entire life is centered around him.
-        </p>
-      </div>
-    {/if}
+        <div class="w-full max-w-md mb-8">
+          <p class="antialiased">{project.name}</p>
+          <p class="antialiased opacity-50">{project.description}</p>
+        </div>
+      </a>
+    {/each}
   </section>
 
-  <div class="w-full bg-olive-50 dark:bg-white/5">
-    <ProjectSection {projects} />
-    <EmploymentSection {employers} />
-    <BlogSection {posts} />
-  </div>
+  <!--Posts-->
+  <section class="my-20">
+    <h2 class="font-bold mb-8">Blog</h2>
 
-  <footer
-    class="w-full bg-gradient-to-r from-white from-7% to-olive-500/20 dark:from-black dark:to-olive-100 xl:h-[500px] p-7 pb-10 md:pb-32 md:pt-28 lg:py-40 md:px-28 lg:px-40 flex flex-col md:items-start md:flex-row md:justify-between mt-1"
-  >
-    <div>
-      <div class="w-full flex items-center justify-between">
-        <h1 class="font-extrabold text-black dark:text-white font-mono">Contact</h1>
-
-        <div class="md:hidden">
-          <SocialButtons />
+    {#each posts as post}
+      <a
+        class="block max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        href="/blog/post/{post.slug}"
+      >
+        <div class="w-full max-w-md mb-8">
+          <p class="antialiased">{post.title}</p>
+          <p class="antialiased opacity-50">{post.description}</p>
         </div>
+      </a>
+    {/each}
+  </section>
+
+  <!--Employers-->
+  <section>
+    <h2 class="font-bold mb-8">Employers</h2>
+
+    {#each employers as employer}
+      <div class="w-full max-w-md mb-8">
+        <p class="antialiased">{employer.name}</p>
+        <p class="antialiased opacity-50">{employer.description}</p>
       </div>
+    {/each}
+  </section>
 
-      <p class="text-black dark:text-white font-light md:max-w-[300px] lg:max-w-lg mt-10">
-        I'm currently available for new job opportunities. Please reach out to me if you have any
-        questions or would like to chat!
-      </p>
-
-      <div class="hidden md:flex md:mt-10 mt-6">
-        <SocialButtons />
-      </div>
-    </div>
-
-    <a
-      href="mailto:joelrivera.me@gmail.com?subject=Hello!"
-      class="flex items-center justify-between bg-black text-white text-sm w-full md:w-[250px] pt-3 pb-3.5 px-5 mt-10 md:mt-16 md:ml-10 hover:bg-olive-500 dark:hover:bg-white/5 focus:outline-dotted dark:focus:outline-white/50 focus:outline-black"
-    >
-      Say Hello! <img
-        src="/right-arrow-xs-light.svg"
-        alt=""
-        width="18"
-        height="18"
-        aria-hidden={true}
-      />
-    </a>
-  </footer>
+  <ScrollTop />
 </main>

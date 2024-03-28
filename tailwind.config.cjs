@@ -9,6 +9,7 @@ const config = {
     },
     extend: {
       colors: {
+        current: 'currentColor',
         olive: {
           50: 'rgba(110, 126, 110, 0.02)',
           100: 'rgba(110, 126, 110, 0.25)',

@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
   import { formatDate } from '$lib/utils'
   export let data
 </script>
@@ -7,27 +7,39 @@
   <title>Joel Rivera — Blog</title>
 
   <meta
-    name='description'
-    content='This is my personal development blog, where I ocassionally post about engineering topics that I find interesting.'
+    name="description"
+    content="This is my personal development blog, where I ocassionally post about engineering topics that I find interesting."
   />
 </svelte:head>
 
-<div class='w-full p-7 min-h-screen md:py-28 md:px-28 lg:px-40 border-b-[#E9E9E9] dark:border-b-white/25 border-b-2 border-dotted dark:bg-white/5'>
-  <h1 class='text-olive-500 font-medium text-2xl md:text-4xl lg:text-[40px] font-mono tracking-tighter [word-spacing:-7px] xl:[word-spacing:-12px] antialiased mb-10'>Blog</h1>
+<main class="p-10 lg:p-14 text-sm lg:text-base">
+  <header class="w-full">
+    <h1 class="antialiased">Blog</h1>
+    <a class="opacity-50 antialiased" href="/">Home</a>
+  </header>
 
-  {#if data.posts}
+  <p class="w-full my-20 mt-[68px] antialiased max-w-md">
+    This is my personal dev blog, where I ocassionally <span class="line-through opacity-50"
+      >rant</span
+    > or post about engineering topics that I find to be very interesting.
+  </p>
+
+  <section class="mt-14">
     {#each data.posts as post (post.id)}
       {@const { title, publishedAt, slug } = post}
 
-      <a class='block mb-6' href='/blog/post/{slug}'>
-        <span class='block antialiased font-semibold'>
+      <a
+        class="block mb-6 max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        href="/blog/post/{slug}"
+      >
+        <span class="block antialiased font-semibold">
           {title}
         </span>
 
-        <small class='antialiased text-gray-500'>
+        <p class="antialiased opacity-50">
           {formatDate(new Date(publishedAt))}
-        </small>
+        </p>
       </a>
     {/each}
-  {/if}
-</div>
+  </section>
+</main>
