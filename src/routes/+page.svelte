@@ -18,8 +18,7 @@
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">
     I love to build modern, AI-powered web applications, combining my engineering expertise with a
-    graphic designer's eye for design and detail. Open to new job opportunities, preferably within
-    AI.
+    graphic designer's eye for design and detail.
   </p>
 
   <!--Apps-->
@@ -48,7 +47,7 @@
     {#each posts as post}
       <a
         class="block max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-        href="/blog/post/{post.slug}"
+        href="/post/{post.slug}"
       >
         <div class="w-full max-w-md mb-8">
           <p class="antialiased">{post.title}</p>
@@ -64,7 +63,7 @@
 
     {#each employers as employer}
       <div class="w-full max-w-md mb-8">
-        <p class="antialiased">{employer.name}</p>
+        <p class="antialiased">{employer.name}—{employer.duration}</p>
         <p class="antialiased opacity-50">{employer.description}</p>
       </div>
     {/each}
