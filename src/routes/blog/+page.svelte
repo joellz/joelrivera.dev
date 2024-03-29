@@ -12,10 +12,10 @@
   />
 </svelte:head>
 
-<main class="p-10 lg:p-14 text-sm lg:text-base">
+<main class="p-10 lg:p-14">
   <header class="w-full">
     <h1 class="antialiased">Blog</h1>
-    <a class="opacity-50 antialiased" href="/">Home</a>
+    <a class="opacity-50 antialiased mt-2 block" href="/">Home</a>
   </header>
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">

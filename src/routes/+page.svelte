@@ -10,7 +10,7 @@
   <meta name="description" content="Senior Front-End Engineer, AI" />
 </svelte:head>
 
-<main class="p-10 lg:p-14 text-sm lg:text-base relative">
+<main class="p-10 lg:p-14 relative">
   <header class="w-full">
     <h1 class="antialiased">Joel Rivera</h1>
     <p class="antialiased opacity-50">Senior Front-End Engineer, AI</p>
@@ -70,5 +70,7 @@
     {/each}
   </section>
 
-  <ScrollTop />
+  <div class="mt-16 mb-10">
+    <ScrollTop />
+  </div>
 </main>
