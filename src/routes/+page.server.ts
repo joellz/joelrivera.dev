@@ -1,4 +1,4 @@
-import type { AllDataResponse } from '../types'
+import type { AllDataResponse } from '$lib/types'
 import { hygraph } from '$lib/hygraph'
 import { GET_ALL_DATA } from '$lib/hygraph/queries'
 

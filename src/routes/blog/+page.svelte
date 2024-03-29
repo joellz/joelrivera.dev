@@ -30,7 +30,7 @@
 
       <a
         class="block mb-6 max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-        href="/blog/post/{slug}"
+        href="/post/{slug}"
       >
         <span class="block antialiased font-semibold">
           {title}

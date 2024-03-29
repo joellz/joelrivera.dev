@@ -2,8 +2,6 @@
   import { marked } from 'marked'
   import { formatDate } from '$lib/utils'
 
-  import ScrollTop from '$lib/components/scroll-top.svelte'
-
   export let data
 
   const { title, description, body, publishedAt } = data.post
@@ -31,11 +29,10 @@
     {@html marked(body)}
   </main>
 
-  <div class="w-full max-w-lg flex items-center justify-between mt-16 mb-10">
+  <div class="w-full max-w-lg flex items-center justify-between my-10">
     <a
       class="my-14 block max-w-xs focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg antialiased"
       href="/blog">View all posts</a
     >
-    <ScrollTop />
   </div>
 </div>
