@@ -13,10 +13,7 @@
 </svelte:head>
 
 <main class="p-10 lg:p-14">
-  <header class="w-full">
-    <h1 class="antialiased">Blog</h1>
-    <a class="opacity-50 antialiased mt-2 block" href="/">Home</a>
-  </header>
+  <h1 class="antialiased">Blog</h1>
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">
     This is my personal dev blog, where I ocassionally <span class="line-through opacity-50"

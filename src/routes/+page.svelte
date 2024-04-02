@@ -1,6 +1,4 @@
 <script lang="ts">
-  import ScrollTop from '$lib/components/scroll-top.svelte'
-
   export let data
   const { projects, employers, posts } = data
 </script>
@@ -11,10 +9,10 @@
 </svelte:head>
 
 <main class="p-10 lg:p-14 relative">
-  <header class="w-full">
-    <h1 class="antialiased">Joel Rivera</h1>
-    <p class="antialiased opacity-50">Senior Front-End Engineer, AI</p>
-  </header>
+  <h1 class="antialiased flex flex-col">
+    Joel Rivera
+    <span class="antialiased opacity-50">Senior Front-End Engineer, AI</span>
+  </h1>
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">
     I love to build modern, AI-powered web applications, combining my engineering expertise with a
@@ -23,7 +21,7 @@
 
   <!--Apps-->
   <section>
-    <h2 class="font-bold mb-8">Apps</h2>
+    <h2 class="font-bold mb-8">Projects</h2>
 
     {#each projects as project}
       <a
@@ -68,8 +66,4 @@
       </div>
     {/each}
   </section>
-
-  <div class="mt-16 mb-10">
-    <ScrollTop />
-  </div>
 </main>
