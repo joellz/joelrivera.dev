@@ -7,11 +7,11 @@ const codegenConfig = {
   overwrite: true,
   schema: process.env.HYGRAPH_CMS_URL,
   generates: {
-    'src/types/generated/': {
+    'src/lib/types/generated/': {
       preset: 'client',
       plugins: []
     },
-    'src/types/generated/graphql.schema.json': {
+    'src/lib/types/generated/graphql.schema.json': {
       plugins: ['introspection']
     }
   }
