@@ -12,7 +12,7 @@
   />
 </svelte:head>
 
-<main class="p-10 lg:p-14">
+<main>
   <h1 class="antialiased">Blog</h1>
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">
@@ -23,7 +23,7 @@
 
   <section class="mt-14">
     {#each data.posts as post (post.id)}
-      {@const { title, publishedAt, slug } = post}
+      {@const { title, createdAt, slug } = post}
 
       <a
         class="block mb-6 max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
@@ -34,7 +34,7 @@
         </span>
 
         <p class="antialiased opacity-50">
-          {formatDate(new Date(publishedAt))}
+          {formatDate(new Date(createdAt))}
         </p>
       </a>
     {/each}
