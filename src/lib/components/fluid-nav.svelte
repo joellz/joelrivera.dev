@@ -19,6 +19,10 @@
     blog: {
       title: 'Blog',
       path: '/blog'
+    },
+    work: {
+      title: 'Work',
+      path: '/work'
     }
   }
 </script>
