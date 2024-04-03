@@ -2,6 +2,33 @@
   export let data
 </script>
 
+<svelte:head>
+  <title>Joel Rivera — Work</title>
+
+  <meta
+    name="description"
+    content="I have a decade of experience leading and executing web development projects with a focus on
+    crafting high-quality, accessible, and inclusive user experiences. I have technical expertise in
+    TypeScript, React, and AI integration, with a passion for learning and design-driven
+    development."
+  />
+
+  <meta name="og:title" content="Joel Rivera — Work" />
+
+  <meta name="og:image" content="/og-banner.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta
+    name="og:description"
+    content={`I have a decade of experience leading and executing web development projects with a focus on
+    crafting high-quality, accessible, and inclusive user experiences. I have technical expertise in
+    TypeScript, React, and AI integration, with a passion for learning and design-driven
+    development.`}
+  />
+</svelte:head>
+
 <main class="antialiased max-w-md mb-20 lg:mb-10">
   <h1 class="flex flex-col">Work</h1>
 

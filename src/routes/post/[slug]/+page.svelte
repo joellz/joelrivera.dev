@@ -10,7 +10,19 @@
 
 <svelte:head>
   <title>Joel Rivera — {title}</title>
+  <meta name="og:title" content="Joel Rivera — Blog" />
+
   <meta name="description" content={description} />
+  <meta name="og:description" content={description} />
+
+  <meta name="og:image" content="/og-banner.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="og:type" content="article" />
+  <meta name="article:published_time" content={published} />
+  <meta name="article:author" content="Joel Rivera" />
 </svelte:head>
 
 <div>

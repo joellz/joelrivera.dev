@@ -4,8 +4,26 @@
 </script>
 
 <svelte:head>
-  <title>Joel Rivera</title>
-  <meta name="description" content="Senior Front-End Engineer, AI" />
+  <title>Joel Rivera. Senior Front-End Engineer, AI</title>
+
+  <meta
+    name="description"
+    content="I love to build modern, AI-powered web applications, combining my engineering expertise with a
+    graphic designer's eye for design and detail."
+  />
+
+  <meta name="og:title" content="Joel Rivera. Senior Front-End Engineer, AI" />
+
+  <meta name="og:image" content="/og-banner.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta
+    name="og:description"
+    content={`I love to build modern, AI-powered web applications, combining my engineering expertise with a
+    graphic designer's eye for design and detail.`}
+  />
 </svelte:head>
 
 <main>

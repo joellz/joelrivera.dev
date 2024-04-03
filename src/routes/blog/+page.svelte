@@ -6,9 +6,21 @@
 <svelte:head>
   <title>Joel Rivera — Blog</title>
 
+  <meta name="og:title" content="Joel Rivera — Blog" />
+
+  <meta name="og:image" content="/og-banner.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
   <meta
     name="description"
     content="This is my personal development blog, where I ocassionally post about engineering topics that I find interesting."
+  />
+
+  <meta
+    name="og:description"
+    content={`This is my personal development blog, where I ocassionally post about engineering topics that I find interesting.`}
   />
 </svelte:head>
 
