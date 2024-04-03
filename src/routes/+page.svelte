@@ -1,6 +1,6 @@
 <script lang="ts">
   export let data
-  const { projects, employers, posts } = data
+  const { projects, posts } = data
 </script>
 
 <svelte:head>
@@ -8,7 +8,7 @@
   <meta name="description" content="Senior Front-End Engineer, AI" />
 </svelte:head>
 
-<main class="p-10 lg:p-14 relative">
+<main>
   <h1 class="antialiased flex flex-col">
     Joel Rivera
     <span class="antialiased opacity-50">Senior Front-End Engineer, AI</span>
