@@ -1,5 +1,4 @@
 import type { Post } from '$lib/types/generated/graphql.js'
-
 import { hygraph } from '$lib/hygraph/index.js'
 import { GET_POSTS } from '$lib/hygraph/queries.js'
 
