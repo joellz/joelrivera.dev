@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-  <title>Joel Rivera — {title}</title>
-  <meta name="og:title" content="Joel Rivera — Blog" />
+  <title>{title}</title>
+  <meta name="og:title" content={title} />
 
   <meta name="description" content={description} />
   <meta name="og:description" content={description} />

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Joel Rivera. Senior Front-End Engineer, AI</title>
+  <title>Joel Rivera</title>
 
   <meta
     name="description"
@@ -12,7 +12,7 @@
     graphic designer's eye for design and detail."
   />
 
-  <meta name="og:title" content="Joel Rivera. Senior Front-End Engineer, AI" />
+  <meta name="og:title" content="Joel Rivera" />
 
   <meta name="og:image" content="/og-banner.jpg" />
   <meta property="og:image:type" content="image/jpeg" />

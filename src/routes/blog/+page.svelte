@@ -4,9 +4,9 @@
 </script>
 
 <svelte:head>
-  <title>Joel Rivera — Blog</title>
+  <title>Blog</title>
 
-  <meta name="og:title" content="Joel Rivera — Blog" />
+  <meta name="og:title" content="Blog" />
 
   <meta name="og:image" content="/og-banner.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
