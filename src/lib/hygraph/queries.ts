@@ -10,7 +10,7 @@ export const GET_ALL_DATA = gql`
       url
     }
 
-    posts(first: 3, orderBy: publishedAt_DESC) {
+    posts(first: 3, orderBy: createdAt_DESC) {
       id
       slug
       title
@@ -20,13 +20,25 @@ export const GET_ALL_DATA = gql`
   }
 `
 
+export const GET_EXPERIENCE = gql`
+  query Employers {
+    employers {
+      id
+      name
+      role
+      duration
+      description
+    }
+  }
+`
+
 export const GET_POSTS = gql`
   query Posts {
-    posts(orderBy: publishedAt_DESC) {
+    posts(orderBy: createdAt_DESC) {
       id
       slug
       title
-      publishedAt
+      createdAt
     }
   }
 `
@@ -38,7 +50,7 @@ export const GET_POST = gql`
       title
       description
       body
-      publishedAt
+      createdAt
     }
   }
 `

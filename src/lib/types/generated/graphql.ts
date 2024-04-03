@@ -34,7 +34,7 @@ export type Aggregate = {
 };
 
 /** Asset system model */
-export type Asset = Node & {
+export type Asset = Entity & Node & {
   __typename?: 'Asset';
   /** The time the document was created */
   createdAt: Scalars['DateTime']['output'];
@@ -785,7 +785,7 @@ export type DocumentVersion = {
   stage: Stage;
 };
 
-export type Employer = Node & {
+export type Employer = Entity & Node & {
   __typename?: 'Employer';
   /** The time the document was created */
   createdAt: Scalars['DateTime']['output'];
@@ -806,6 +806,7 @@ export type Employer = Node & {
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
   /** User that last published this document */
   publishedBy?: Maybe<User>;
+  role?: Maybe<Scalars['String']['output']>;
   scheduledIn: Array<ScheduledOperation>;
   /** System stage field */
   stage: Stage;
@@ -882,6 +883,7 @@ export type EmployerCreateInput = {
   duration?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name: Scalars['String']['input'];
+  role?: InputMaybe<Scalars['String']['input']>;
   updatedAt?: InputMaybe<Scalars['DateTime']['input']>;
 };
 
@@ -1048,6 +1050,25 @@ export type EmployerManyWhereInput = {
   /** All values that are not contained in given list. */
   publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   publishedBy?: InputMaybe<UserWhereInput>;
+  role?: InputMaybe<Scalars['String']['input']>;
+  /** All values containing the given string. */
+  role_contains?: InputMaybe<Scalars['String']['input']>;
+  /** All values ending with the given string. */
+  role_ends_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values that are contained in given list. */
+  role_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  role_not?: InputMaybe<Scalars['String']['input']>;
+  /** All values not containing the given string. */
+  role_not_contains?: InputMaybe<Scalars['String']['input']>;
+  /** All values not ending with the given string */
+  role_not_ends_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values that are not contained in given list. */
+  role_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** All values not starting with the given string. */
+  role_not_starts_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values starting with the given string. */
+  role_starts_with?: InputMaybe<Scalars['String']['input']>;
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
@@ -1084,6 +1105,8 @@ export enum EmployerOrderByInput {
   NameDesc = 'name_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
+  RoleAsc = 'role_ASC',
+  RoleDesc = 'role_DESC',
   UpdatedAtAsc = 'updatedAt_ASC',
   UpdatedAtDesc = 'updatedAt_DESC'
 }
@@ -1093,6 +1116,7 @@ export type EmployerUpdateInput = {
   duration?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
+  role?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type EmployerUpdateManyInlineInput = {
@@ -1117,6 +1141,7 @@ export type EmployerUpdateManyInput = {
   duration?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
+  role?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type EmployerUpdateManyWithNestedWhereInput = {
@@ -1308,6 +1333,25 @@ export type EmployerWhereInput = {
   /** All values that are not contained in given list. */
   publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   publishedBy?: InputMaybe<UserWhereInput>;
+  role?: InputMaybe<Scalars['String']['input']>;
+  /** All values containing the given string. */
+  role_contains?: InputMaybe<Scalars['String']['input']>;
+  /** All values ending with the given string. */
+  role_ends_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values that are contained in given list. */
+  role_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  role_not?: InputMaybe<Scalars['String']['input']>;
+  /** All values not containing the given string. */
+  role_not_contains?: InputMaybe<Scalars['String']['input']>;
+  /** All values not ending with the given string */
+  role_not_ends_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values that are not contained in given list. */
+  role_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** All values not starting with the given string. */
+  role_not_starts_with?: InputMaybe<Scalars['String']['input']>;
+  /** All values starting with the given string. */
+  role_starts_with?: InputMaybe<Scalars['String']['input']>;
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
@@ -1346,6 +1390,39 @@ export type EmployerWhereStageInput = {
 /** References Employer record uniquely */
 export type EmployerWhereUniqueInput = {
   id?: InputMaybe<Scalars['ID']['input']>;
+};
+
+/** An object with an ID */
+export type Entity = {
+  /** The id of the object. */
+  id: Scalars['ID']['output'];
+  /** The Stage of an object */
+  stage: Stage;
+};
+
+/** This enumeration holds all typenames that implement the Entity interface. Components and models implement the Entity interface. */
+export enum EntityTypeName {
+  /** Asset system model */
+  Asset = 'Asset',
+  Employer = 'Employer',
+  Post = 'Post',
+  Project = 'Project',
+  /** Scheduled Operation system model */
+  ScheduledOperation = 'ScheduledOperation',
+  /** Scheduled Release system model */
+  ScheduledRelease = 'ScheduledRelease',
+  /** User system model */
+  User = 'User'
+}
+
+/** Allows to specify input to query models and components directly */
+export type EntityWhereInput = {
+  /** The ID of an object */
+  id: Scalars['ID']['input'];
+  locale?: InputMaybe<Locale>;
+  stage: Stage;
+  /** The Type name of an object */
+  typename: EntityTypeName;
 };
 
 export enum ImageFit {
@@ -2127,7 +2204,7 @@ export type PageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
-export type Post = Node & {
+export type Post = Entity & Node & {
   __typename?: 'Post';
   body: Scalars['String']['output'];
   /** The time the document was created */
@@ -2689,7 +2766,7 @@ export type PostWhereUniqueInput = {
   slug?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type Project = Node & {
+export type Project = Entity & Node & {
   __typename?: 'Project';
   /** The time the document was created */
   createdAt: Scalars['DateTime']['output'];
@@ -3278,6 +3355,8 @@ export type Query = {
   /** Retrieve multiple employers using the Relay connection interface */
   employersConnection: EmployerConnection;
   /** Fetches an object given its ID */
+  entities?: Maybe<Array<Entity>>;
+  /** Fetches an object given its ID */
   node?: Maybe<Node>;
   /** Retrieve a single post */
   post?: Maybe<Post>;
@@ -3389,6 +3468,12 @@ export type QueryEmployersConnectionArgs = {
   skip?: InputMaybe<Scalars['Int']['input']>;
   stage?: Stage;
   where?: InputMaybe<EmployerWhereInput>;
+};
+
+
+export type QueryEntitiesArgs = {
+  locales?: InputMaybe<Array<Locale>>;
+  where: Array<EntityWhereInput>;
 };
 
 
@@ -3604,7 +3689,7 @@ export type RichText = {
 };
 
 /** Scheduled Operation system model */
-export type ScheduledOperation = Node & {
+export type ScheduledOperation = Entity & Node & {
   __typename?: 'ScheduledOperation';
   affectedDocuments: Array<ScheduledOperationAffectedDocument>;
   /** The time the document was created */
@@ -4039,7 +4124,7 @@ export type ScheduledOperationWhereUniqueInput = {
 };
 
 /** Scheduled Release system model */
-export type ScheduledRelease = Node & {
+export type ScheduledRelease = Entity & Node & {
   __typename?: 'ScheduledRelease';
   /** The time the document was created */
   createdAt: Scalars['DateTime']['output'];
@@ -4640,7 +4725,7 @@ export type UnpublishLocaleInput = {
 };
 
 /** User system model */
-export type User = Node & {
+export type User = Entity & Node & {
   __typename?: 'User';
   /** The time the document was created */
   createdAt: Scalars['DateTime']['output'];
