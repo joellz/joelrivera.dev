@@ -54,16 +54,4 @@
       </a>
     {/each}
   </section>
-
-  <!--Employers-->
-  <section>
-    <h2 class="font-bold mb-8">Employers</h2>
-
-    {#each employers as employer}
-      <div class="w-full max-w-md mb-8">
-        <p class="antialiased">{employer.name}—{employer.duration}</p>
-        <p class="antialiased opacity-50">{employer.description}</p>
-      </div>
-    {/each}
-  </section>
 </main>

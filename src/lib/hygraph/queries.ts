@@ -10,14 +10,6 @@ export const GET_ALL_DATA = gql`
       url
     }
 
-    employers(first: 3) {
-      id
-      name
-      description
-      duration
-      link
-    }
-
     posts(first: 3, orderBy: publishedAt_DESC) {
       id
       slug
