@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config}*/
+const plugin = require('tailwindcss/plugin')
+
 const config = {
   darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -24,7 +26,15 @@ const config = {
     }
   },
 
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [
+    require('@tailwindcss/typography'),
+    plugin(({ addVariant }) => {
+      addVariant(
+        'prose-inline-code',
+        '&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *))'
+      )
+    })
+  ]
 }
 
 module.exports = config
