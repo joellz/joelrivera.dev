@@ -34,21 +34,25 @@
   </p>
 
   <section class="mt-14">
-    {#each data.posts as post (post.id)}
-      {@const { title, createdAt, slug } = post}
+    <ul>
+      <li>
+        {#each data.posts as post (post.id)}
+          {@const { title, createdAt, slug } = post}
 
-      <a
-        class="block mb-6 focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-        href="/post/{slug}"
-      >
-        <span class="block antialiased font-semibold">
-          {title}
-        </span>
+          <a
+            class="block mb-6 focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+            href="/post/{slug}"
+          >
+            <span class="block antialiased font-semibold">
+              {title}
+            </span>
 
-        <p class="antialiased opacity-50">
-          {formatDate(new Date(createdAt))}
-        </p>
-      </a>
-    {/each}
+            <p class="antialiased opacity-50">
+              {formatDate(new Date(createdAt))}
+            </p>
+          </a>
+        {/each}
+      </li>
+    </ul>
   </section>
 </main>
