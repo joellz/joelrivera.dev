@@ -29,12 +29,12 @@
 <main>
   <h1 class="antialiased flex flex-col">
     Joel Rivera
-    <span class="antialiased opacity-50">Senior Front-End Engineer, AI</span>
+    <span class="antialiased opacity-50">Full-Stack Designer, AI</span>
   </h1>
 
   <p class="w-full my-20 mt-[68px] antialiased max-w-md">
-    I love to build modern, AI-powered web applications, combining my engineering expertise with a
-    graphic designer's eye for design and detail.
+    I craft innovative, AI-powered web applications that blend technical expertise with creative
+    vision, delivering exceptional, functional, visually stunning user experiences.
   </p>
 
   <!--Apps-->
