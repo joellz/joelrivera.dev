@@ -4,7 +4,9 @@
 </script>
 
 <div class="p-10 lg:p-14">
-  <slot />
+  <div class="max-w-md mx-auto">
+    <slot />
+  </div>
 </div>
 
 <FluidNav />

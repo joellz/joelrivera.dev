@@ -27,7 +27,7 @@
 <main>
   <h1 class="antialiased">Blog</h1>
 
-  <p class="w-full my-20 mt-[68px] antialiased max-w-md">
+  <p class="w-full my-20 mt-[68px] antialiased">
     This is my personal dev blog, where I ocassionally <span class="line-through opacity-50"
       >rant</span
     > or post about engineering topics that I find to be very interesting.
@@ -38,7 +38,7 @@
       {@const { title, createdAt, slug } = post}
 
       <a
-        class="block mb-6 max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        class="block mb-6 focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
         href="/post/{slug}"
       >
         <span class="block antialiased font-semibold">

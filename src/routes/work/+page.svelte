@@ -29,7 +29,7 @@
   />
 </svelte:head>
 
-<main class="antialiased max-w-md mb-20 lg:mb-10">
+<main class="antialiased mb-20 lg:mb-10">
   <h1 class="flex flex-col">Work</h1>
 
   <p class="w-full mt-10 text-current">

@@ -32,7 +32,7 @@
     <span class="antialiased opacity-50">Full-Stack Designer, AI</span>
   </h1>
 
-  <p class="w-full my-20 mt-[68px] antialiased max-w-md">
+  <p class="w-full my-20 mt-[68px] antialiased">
     I craft innovative, AI-powered web applications that blend technical expertise with creative
     vision, delivering exceptional, functional, visually stunning user experiences.
   </p>
@@ -43,12 +43,12 @@
 
     {#each projects as project}
       <a
-        class="block max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
         href={project.url}
         rel="noreferrer nofollow"
         target="_blank"
       >
-        <div class="w-full max-w-md mb-8">
+        <div class="w-full mb-8">
           <p class="antialiased">{project.name}</p>
           <p class="antialiased opacity-50">{project.description}</p>
         </div>
@@ -62,10 +62,10 @@
 
     {#each posts as post}
       <a
-        class="block max-w-md focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+        class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
         href="/post/{post.slug}"
       >
-        <div class="w-full max-w-md mb-8">
+        <div class="w-full mb-8">
           <p class="antialiased">{post.title}</p>
           <p class="antialiased opacity-50">{post.description}</p>
         </div>
