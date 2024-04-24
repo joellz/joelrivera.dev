@@ -32,7 +32,7 @@
 >
   <nav
     id="nav"
-    class="flex items-center justify-between rounded-xl backdrop-blur-lg bg-white/5 p-4 pl-5 transition-all lg:mr-7"
+    class="flex items-center justify-between rounded-xl border border-white/5 backdrop-blur-lg bg-white/5 p-4 pl-5 transition-all lg:mr-7"
   >
     <ul class="w-full flex items-center">
       {#each Object.keys(routeConfig) as key, i (i)}
