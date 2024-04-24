@@ -42,7 +42,7 @@
   <section class="my-20">
     <h2 class="mb-8">Skills</h2>
 
-    <p class="text-green-200">
+    <p class="opacity-50">
       TypeScript, React, Next, Remix, SvelteKit, TailwindCSS, Node, Jest, React Testing Library,
       Cypress, Postgres, MongoDB, Web Accessibility, CI/CD
     </p>
