@@ -44,8 +44,8 @@
 
     <p class="opacity-50">
       TypeScript, React, Next, Remix, SvelteKit, TailwindCSS, GraphQL, Node, Jest, React Testing
-      Library, Cypress, Postgres, MongoDB, Web Accessibility, IBM Watson, Generative AI, CI/CD, IBM
-      Cloud, Vercel
+      Library, Cypress, Postgres, MongoDB, Web Accessibility, IBM Watson AI, Generative AI, CI/CD,
+      IBM Cloud, Vercel
     </p>
   </section>
 
