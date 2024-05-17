@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { Sparkles } from 'lucide-svelte'
+</script>
+
 <svelte:head>
   <title>Joel Rivera — Consulting</title>
 
@@ -45,16 +49,21 @@
     </p>
 
     <ol class="mt-5">
-      <li class="mb-2">1. E-commerce Stores</li>
-      <li class="mb-2">2. Simple landing pages</li>
+      <li class="mb-2">1. Simple landing pages</li>
+      <li class="mb-2">2. E-commerce stores</li>
       <li class="mb-2">3. Dashboards</li>
       <li class="mb-2">4. Blogs</li>
       <li class="mb-2">5. AI-powered chatbots</li>
     </ol>
 
-    <p class="w-full mt-10 text-current">
-      Interested in what AI can do for you? I specialize in AI integration and can help you build
-      custom AI-powered experiences.
+    <p
+      class="w-full mt-10 text-current relative after:border after:border-stone-50/5 after:absolute after:w-full after:top-1 after:left-0 after:scale-x-110 after:bg-stone-50/5 after:-z-10 after:scale-y-125 after:h-full after:rounded-xl after:p-5 after:block"
+    >
+      <span class="flex items-center pt-1 mb-5 font-semibold"
+        ><Sparkles size={18} class="mr-2" /> AI Integration</span
+      >
+      Interested in what AI can do for you? I specialize in AI integration and can help you build custom
+      AI-powered experiences.
     </p>
   </section>
 
