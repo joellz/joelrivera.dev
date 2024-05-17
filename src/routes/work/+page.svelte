@@ -1,5 +1,6 @@
 <script lang="ts">
   export let data
+  import { ArrowRight } from 'lucide-svelte'
 </script>
 
 <svelte:head>
@@ -49,16 +50,41 @@
     </p>
   </section>
 
+  <section
+    class="my-20 relative after:border after:border-stone-50/5 after:absolute after:w-full after:top-1 after:left-0 after:scale-x-110 after:bg-stone-50/5 after:-z-10 after:scale-y-125 after:h-full after:rounded-xl after:p-5 after:block"
+  >
+    <h2 class="mb-8">Consulting</h2>
+
+    <p class="opacity-50">
+      I'm available for freelance work. If you have a project you have in mind, let's talk about it.
+      Fixed project costs, no surprises.
+    </p>
+
+    <a
+      href="/consulting"
+      class="inline-block bg-white/10 rounded-lg mt-5 py-2 px-4 pb-2.5 hover:bg-white/30 transition-all"
+    >
+      Learn More <ArrowRight class="inline-block ml-1" size={16} />
+    </a>
+  </section>
+
   <section>
     <h2 class="mb-8">Experience</h2>
 
     <ul>
       {#each data.employers as { id, duration, name, role, description } (id)}
         <li class="mb-8 last:mb-0">
-          <h2>{name}, {role}, {duration}</h2>
+          <h2>{name}, {role}</h2>
           <p class="opacity-50">{description}</p>
         </li>
       {/each}
     </ul>
+
+    <a
+      href="/resume.pdf"
+      class="inline-block bg-white/10 rounded-lg mt-10 py-2 px-4 pb-2.5 hover:bg-white/30 transition-all"
+    >
+      View Resume
+    </a>
   </section>
 </main>
