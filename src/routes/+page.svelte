@@ -29,7 +29,7 @@
 <main>
   <h1 class="antialiased flex flex-col">
     Joel Rivera
-    <span class="antialiased opacity-50">Full-Stack Designer</span>
+    <span class="antialiased opacity-50">Senior Front-End Engineer, AI</span>
   </h1>
 
   <p class="w-full my-20 mt-[68px] antialiased">
