@@ -10,7 +10,7 @@ export const GET_EXPERIENCE_AND_PROJECTS = gql`
       description
     }
 
-    projects(first: 3) {
+    projects {
       id
       name
       description
