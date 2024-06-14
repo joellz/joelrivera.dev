@@ -26,7 +26,7 @@
   />
 </svelte:head>
 
-<main>
+<main class='mb-32'>
   <h1 class="antialiased flex flex-col">
     Joel Rivera
     <span class="antialiased opacity-50">Senior Front-End Engineer, AI</span>
@@ -36,29 +36,6 @@
     I craft innovative, AI-powered web applications that blend technical expertise with creative
     vision, delivering exceptional, functional, visually stunning user experiences.
   </p>
-
-  <!--Apps-->
-  <section>
-    <h2 class="font-bold mb-8">Projects</h2>
-
-    <ul>
-      {#each projects as project}
-        <li>
-          <a
-            class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-            href={project.url}
-            rel="noreferrer nofollow"
-            target="_blank"
-          >
-            <div class="w-full mb-8">
-              <p class="antialiased">{project.name}</p>
-              <p class="antialiased opacity-50">{project.description}</p>
-            </div>
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </section>
 
   <!--Posts-->
   <section class="my-20">

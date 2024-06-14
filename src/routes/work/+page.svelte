@@ -1,6 +1,8 @@
 <script lang="ts">
-  export let data
   import { ArrowRight } from 'lucide-svelte'
+
+  export let data
+  const { projects, employers } = data
 </script>
 
 <svelte:head>
@@ -30,7 +32,7 @@
   />
 </svelte:head>
 
-<main class="antialiased mb-20 lg:mb-10">
+<main class="antialiased mb-32 lg:mb-10">
   <h1 class="flex flex-col">Work</h1>
 
   <p class="w-full mt-10 text-current">
@@ -50,8 +52,46 @@
     </p>
   </section>
 
+
+
+    <!--Apps-->
+  <section class='my-20'>
+    <h2 class="mb-8">Side Projects</h2>
+
+    <ul>
+      {#each projects as { id, name, description, url, } (id)}
+        <li>
+          <a
+            class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
+            href={url}
+            rel="noreferrer nofollow"
+            target="_blank"
+          >
+            <div class="w-full mb-8">
+              <p class="antialiased">{name}</p>
+              <p class="antialiased opacity-50">{description}</p>
+            </div>
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="mb-8">Experience</h2>
+
+    <ul>
+      {#each employers as { id, duration, name, role } (id)}
+        <li class="pb-5 mb-4 last:mb-0 border-b border-b-white/10 last:border-b-0">
+          <h2>{name}, {role}</h2>
+          <p class="opacity-50">{duration}</p>
+        </li>
+      {/each}
+    </ul>
+  </section>
+
   <section
-    class="my-20 relative after:border after:border-stone-50/5 after:absolute after:w-full after:top-1 after:left-0 after:scale-x-110 after:bg-stone-50/5 after:-z-10 after:scale-y-125 after:h-full after:rounded-xl after:p-5 after:block"
+    class="my-20 mt-16 relative after:border after:border-stone-50/5 after:absolute after:w-full after:top-1 after:left-0 after:scale-x-110 after:bg-stone-50/5 after:-z-10 after:scale-y-125 after:h-full after:rounded-xl after:p-5 after:block"
   >
     <h2 class="mb-8">Consulting</h2>
 
@@ -65,26 +105,6 @@
       class="inline-block bg-white/10 rounded-lg mt-5 py-2 px-4 pb-2.5 hover:bg-white/30 transition-all"
     >
       Learn More <ArrowRight class="inline-block ml-1" size={16} />
-    </a>
-  </section>
-
-  <section>
-    <h2 class="mb-8">Experience</h2>
-
-    <ul>
-      {#each data.employers as { id, duration, name, role, description } (id)}
-        <li class="mb-8 last:mb-0">
-          <h2>{name}, {role}</h2>
-          <p class="opacity-50">{description}</p>
-        </li>
-      {/each}
-    </ul>
-
-    <a
-      href="/resume.pdf"
-      class="inline-block bg-white/10 rounded-lg mt-10 py-2 px-4 pb-2.5 hover:bg-white/30 transition-all"
-    >
-      View Resume
     </a>
   </section>
 </main>

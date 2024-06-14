@@ -1,21 +1,21 @@
 import { gql } from 'graphql-request'
 
-export const GET_ALL_DATA = gql`
-  query allData {
+export const GET_EXPERIENCE_AND_PROJECTS = gql`
+  query Employers {
+    employers {
+      id
+      name
+      role
+      duration
+      description
+    }
+
     projects(first: 3) {
       id
       name
       description
       repo
       url
-    }
-
-    posts(first: 3, orderBy: createdAt_DESC) {
-      id
-      slug
-      title
-      description
-      body
     }
   }
 `
@@ -38,6 +38,7 @@ export const GET_POSTS = gql`
       id
       slug
       title
+      description
       createdAt
     }
   }

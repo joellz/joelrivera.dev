@@ -27,7 +27,7 @@
   />
 </svelte:head>
 
-<main class="antialiased mb-20 lg:mb-10">
+<main class="antialiased mb-32 lg:mb-10">
   <h1 class="flex flex-col">Consulting</h1>
 
   <p class="w-full mt-10 text-current">

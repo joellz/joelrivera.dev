@@ -1,7 +1,11 @@
-import type { AllDataResponse } from '$lib/types'
+import type { Post } from '$lib/types/generated/graphql'
 import { hygraph } from '$lib/hygraph'
-import { GET_ALL_DATA } from '$lib/hygraph/queries'
+import { GET_POSTS } from '$lib/hygraph/queries'
+
+interface PostsResponse {
+  posts: Post[]
+}
 
 export const load = async () => {
-  return await hygraph.request<AllDataResponse>(GET_ALL_DATA)
+  return await hygraph.request<PostsResponse>(GET_POSTS)
 }
