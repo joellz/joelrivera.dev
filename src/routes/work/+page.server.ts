@@ -10,5 +10,3 @@ interface Response {
 export const load = async () => {
   return await hygraph.request<Response>(GET_EXPERIENCE_AND_PROJECTS)
 }
-
-export const prerender = true

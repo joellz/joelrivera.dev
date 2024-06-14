@@ -1,6 +1,6 @@
 <script lang="ts">
   export let data
-  const { projects, posts } = data
+  const { posts } = data
 </script>
 
 <svelte:head>
