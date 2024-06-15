@@ -1,6 +1,5 @@
 <script lang="ts">
   export let data
-  const { posts } = data
 </script>
 
 <svelte:head>
@@ -8,8 +7,7 @@
 
   <meta
     name="description"
-    content="I craft innovative, AI-powered web applications that blend technical expertise with creative
-    vision, delivering exceptional, functional, visually stunning user experiences."
+    content="Hey there! I'm Joel, a front-end engineer and designer with a focus on building beautiful AI-powered user experiences."
   />
 
   <meta name="og:title" content="Joel Rivera" />
@@ -21,8 +19,7 @@
 
   <meta
     name="og:description"
-    content={`I craft innovative, AI-powered web applications that blend technical expertise with creative
-    vision, delivering exceptional, functional, visually stunning user experiences.`}
+    content={`Hey there! I'm Joel, a front-end engineer and designer with a focus on building beautiful AI-powered user experiences.`}
   />
 </svelte:head>
 
@@ -33,8 +30,7 @@
   </h1>
 
   <p class="w-full my-20 mt-[68px] antialiased">
-    I craft innovative, AI-powered web applications that blend technical expertise with creative
-    vision, delivering exceptional, functional, visually stunning user experiences.
+    Hey there! I'm Joel, a front-end engineer and designer with a focus on building beautiful AI-powered user experiences.
   </p>
 
   <!--Posts-->
@@ -42,15 +38,15 @@
     <h2 class="font-bold mb-8">Blog</h2>
 
     <ul>
-      {#each posts as post}
+      {#each data.posts as { id, slug, title, description } (id)}
         <li>
           <a
             class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-            href="/post/{post.slug}"
+            href="/post/{slug}"
           >
             <div class="w-full mb-8">
-              <p class="antialiased">{post.title}</p>
-              <p class="antialiased opacity-50">{post.description}</p>
+              <p class="antialiased">{title}</p>
+              <p class="antialiased opacity-50">{description}</p>
             </div>
           </a>
         </li>
