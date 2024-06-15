@@ -59,11 +59,11 @@
     <h2 class="mb-8">Side Projects</h2>
 
     <ul>
-      {#each projects as { id, name, description, url, } (id)}
+      {#each projects as { id, name, description, repo, } (id)}
         <li>
           <a
             class="block focus:outline-dotted focus:outline-white/50 focus:outline-offset-[16px] rounded-lg"
-            href={url}
+            href={repo}
             rel="noreferrer nofollow"
             target="_blank"
           >
