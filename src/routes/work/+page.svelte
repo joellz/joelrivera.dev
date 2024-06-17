@@ -36,10 +36,7 @@
   <h1 class="flex flex-col">Work</h1>
 
   <p class="w-full mt-10 text-current">
-    I have a decade of experience leading and executing web development projects with a focus on
-    crafting high-quality, accessible, and inclusive user experiences. I have technical expertise in
-    TypeScript, React, and AI integration, with a passion for learning and design-driven
-    development.
+    I have ten years of experience designing and building modern, accessible, and inclusive user experiences.
   </p>
 
   <section class="my-20">
