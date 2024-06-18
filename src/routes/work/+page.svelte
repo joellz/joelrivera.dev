@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowRight } from 'lucide-svelte'
+  import { ArrowRight, File } from 'lucide-svelte'
 
   export let data
   const { projects, employers } = data
@@ -75,7 +75,13 @@
   </section>
 
   <section>
-    <h2 class="mb-8">Experience</h2>
+    <div class='w-full flex items-center justify-between mb-8'>
+      <h2>Experience</h2>
+
+      <a href='/resume.pdf' target="_blank">
+        <File size={20} class='text-stone-600 ml-3 hover:text-stone-400 transition-colors' />
+      </a>
+    </div>
 
     <ul>
       {#each employers as { id, duration, name, role } (id)}
